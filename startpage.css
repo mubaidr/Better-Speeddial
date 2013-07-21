@@ -6,30 +6,6 @@ nav{height: 100px!important}
 nav>.wrapper{ padding:0!important }
 .scroll-container{top: 0!important}
 #view-container{top: 100px!important}
-#container-contextual-functionality{
-	position: absolute!important; 
-	margin-left: 48%!important;
-	margin-top: 2%;
-}
-#container-contextual-functionality > .filter-container > .text-input{
-	border-radius: 2px!important;
-	width: 180px!important;
-	float:left!important;
-	border: 1px solid rgba(0,0,0, 0.1)!important;
-	box-shadow: none!important;
-	transition: border-color 0.25s!important;
-	background-color: white!important;
-}
-#container-contextual-functionality > .filter-container > .text-input:hover{
-	width: 180px;
-	border: 1px solid rgba(0,0,0, 0.2)!important;
-	box-shadow: none!important;
-}
-#container-contextual-functionality > .filter-container > .text-input:focus{
-	width: 180px;
-	border: 1px solid #b7b8b9!important;
-	box-shadow: none!important;
-}
 .speeddial:not(.editing){
 	box-shadow: none!important;
 	transition: border-color 0.5s!important;
@@ -50,28 +26,27 @@ nav>.wrapper{ padding:0!important }
 .speeddial.folder:hover{
 	
 }
-
 .dial-thumbnail{border-radius: 0!important;
 	border: none!important;
 }
-
 .section-nav{
-	border-radius: 0!important;
+	border-radius: 0 0 3px 3px!important;
 	background-color: #f5f6f7!important;
 	border: 1px solid rgba(0, 0, 0, .1)!important;
-	margin: 0!important;
-	border-radius: 0 0 5px 5px!important;
+	margin: 0!important;	
+	background-color: #e3e8ea!important;
 }
 .section-nav:hover{
 	color: black!important;
+	background-color: #f5f6f7!important;
 }
 .section-nav.selected{
+	background-color: #f5f6f7!important;
 	border: 1px solid transparent!important;
 	background-color: none!important;
 	box-shadow: none!important;
 	color: black!important;
 }
-
 .folder-outer-container{
 	border-radius: 0!important;
 	border: 1px solid rgba(0, 0, 0, .1)!important;
@@ -79,35 +54,16 @@ nav>.wrapper{ padding:0!important }
 	box-shadow: none!important;
 	background-color: rgba(0, 0, 0, 0.6)!important;
 }
-
+.folder-title-container{
+	background-color: rgba(0, 0, 0, 0.3)!important;
+}
+.folder-title-container .folder-title {	
+}
 .folder-filter{
+	display: none!important;
+	left: 43.5%!important;	
 	border-radius: 0!important;
 }
-
 .wallpaper-gradient{
 	background: none!important;
-}
-
-::-webkit-scrollbar {
-	width : 8px!important;
-	height : 8px!important;
-	background :  #f5f6f7;
-	border: 1px solid #bababc;
-	border-width: 0 1px!important;
-}
-::-webkit-scrollbar:horizontal {
-	border: 1px solid #bababc;
-	border-width: 1px 0!important;
-}
-::-webkit-scrollbar:hover {
-	background :  #bababc;
-}
-::-webkit-scrollbar-thumb {
-	background : rgba(0, 0, 0, .30);
-}
-::-webkit-scrollbar-thumb:hover {
-	background : rgba(0, 0, 0, .50);
-}
-::-webkit-scrollbar-corner {
-	background :  #f5f6f7;
 }
