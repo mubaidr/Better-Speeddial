@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Better Speeddial",
+  "description": "Brings many improvements to Speed-dial.",
+  "version": "1.0",  
+  "icons": { "16": "speeddial16.png", 
+             "48": "speeddial48.png", 
+             "64": "speeddial64.png" 
+   },  
+  "minimum_chrome_version": "16.0.1196.14",
+  "content_scripts" : [{
+			"matches" : ["opera://startpage/*"],
+			"css" : ["startpage.css"]
+		}
+	],
+	"developer" : {
+		"name" : "mubaidr"
+	}
+}
