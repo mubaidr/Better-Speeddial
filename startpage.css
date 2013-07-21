@@ -1,11 +1,10 @@
 /*Speeddial*/
 .web-search{display: none !important} /*Google search*/
-.speeddial-add{display: none !important} /*Add Speddial Button*/
-.speeddial-container{padding-top: 5px !important} /*move dials above*/
-nav{height: 100px!important}
-nav>.wrapper{ padding:0!important }
-.scroll-container{top: 0!important}
-#view-container{top: 100px!important}
+.speeddial-container{padding-top: 10px !important} /*move dials above*/
+nav{height: 75px!important}
+nav>.wrapper{ padding:0 145px!important }
+.scroll-container{top: 0!important;}
+#view-container{top: 75px!important}
 .speeddial:not(.editing){
 	box-shadow: none!important;
 	transition: border-color 0.5s!important;
@@ -17,6 +16,15 @@ nav>.wrapper{ padding:0!important }
 .speeddial{
 	border-radius: 0!important;
 	border: none!important;
+}
+.speeddial-add{
+	/*background: none!important;*/
+	margin-left: 40px!important;
+	margin-top: 10px!important;
+	width: 150px!important;
+	height: 150px!important;
+	border-radius: 150px!important;
+	border: 1px solid rgba(0, 0, 0, .75)!important;
 }
 .folder{
 	border-radius: 0!important;
@@ -30,11 +38,12 @@ nav>.wrapper{ padding:0!important }
 	border: none!important;
 }
 .section-nav{
-	border-radius: 0 0 3px 3px!important;
-	background-color: #f5f6f7!important;
+	border-radius: 0 0 3px 3px!important;	
 	border: 1px solid rgba(0, 0, 0, .1)!important;
-	margin: 0!important;	
-	background-color: #e3e8ea!important;
+	border-top-color: #e6e6e6!important;
+	margin: 0!important;
+	background-color: #e6e6e6!important;
+	
 }
 .section-nav:hover{
 	color: black!important;
@@ -42,25 +51,25 @@ nav>.wrapper{ padding:0!important }
 }
 .section-nav.selected{
 	background-color: #f5f6f7!important;
-	border: 1px solid transparent!important;
 	background-color: none!important;
 	box-shadow: none!important;
 	color: black!important;
+	border-top-color: #f5f6f7!important;
 }
 .folder-outer-container{
 	border-radius: 0!important;
-	border: 1px solid rgba(0, 0, 0, .1)!important;
 	background: none!important;
 	box-shadow: none!important;
-	background-color: rgba(0, 0, 0, 0.6)!important;
+	background-color: rgba(0, 0, 0, 0.75)!important;
 }
 .folder-title-container{
-	background-color: rgba(0, 0, 0, 0.3)!important;
+	background-color: rgba(0, 0, 0, 0.5)!important;
 }
 .folder-title-container .folder-title {	
+	width: auto!important;
+	left: 0!important;
 }
 .folder-filter{
-	display: none!important;
 	left: 43.5%!important;	
 	border-radius: 0!important;
 }
