@@ -1,10 +1,42 @@
 /*Speeddial*/
-.web-search{display: none !important} /*Google search*/
-.speeddial-container{padding-top: 10px !important} /*move dials above*/
-nav{height: 75px!important}
-nav>.wrapper{ padding:0 145px!important }
-.scroll-container{top: 0!important;}
-#view-container{top: 75px!important}
+.web-search{display: none !important}
+#view-container.scroll-container{top: 0!important;}
+#view-container.scroll-container.speeddial-container{padding-top: 10px !important}
+
+nav{
+	width: 100%!important;
+	position: absolute!important;
+	height: 118px!important;
+	box-shadow: none!important;
+	cursor: pointer;
+}
+nav .wrapper{
+	/*padding:0 145px!important;*/
+	margin-top: -50px!important;
+	transition: margin 0.25s!important;
+}
+nav:hover .wrapper{
+	margin-top: -2px!important;
+}
+nav .section-nav{
+	box-shadow: none!important;
+	border-radius: 0 0 3px 3px!important;
+	margin: 0!important;
+	border: 1px solid rgba(0, 0, 0, 0.3)!important;
+	border-top-color:#bababc!important;
+	background-color: #f5f5f5!important;
+	padding-top: 2px!important;
+	padding-bottom: 2px!important;
+}
+nav .section-nav:hover{
+	color: black!important;
+	background-color: white!important;
+}
+nav .section-nav.selected{
+	border-radius: 0 0 3px 3px!important;
+	background-color: #fafafa!important;
+	color: black!important;
+}
 .speeddial:not(.editing){
 	box-shadow: none!important;
 	transition: border-color 0.5s!important;
@@ -37,31 +69,18 @@ nav>.wrapper{ padding:0 145px!important }
 .dial-thumbnail{border-radius: 0!important;
 	border: none!important;
 }
-.section-nav{
-	border-radius: 0 0 3px 3px!important;	
-	border: 1px solid rgba(0, 0, 0, .1)!important;
-	border-top-color: #e6e6e6!important;
-	margin: 0!important;
-	background-color: #e6e6e6!important;
-	
-}
-.section-nav:hover{
-	color: black!important;
-	background-color: #f5f6f7!important;
-}
-.section-nav.selected{
-	background-color: #f5f6f7!important;
-	background-color: none!important;
-	box-shadow: none!important;
-	color: black!important;
-	border-top-color: #f5f6f7!important;
-}
+
 .folder-outer-container{
 	border-radius: 0!important;
 	background: none!important;
 	box-shadow: none!important;
 	background-color: rgba(0, 0, 0, 0.75)!important;
 }
+
+.folder-speeddial-container .speeddial-add{
+	background-color: rgba(255, 255, 255, 0.3)!important;
+}
+
 .folder-title-container{
 	background-color: rgba(0, 0, 0, 0.5)!important;
 }

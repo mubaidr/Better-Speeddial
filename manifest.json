@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Better Dial +",
   "description": "Brings many improvements to Speed-dial.",
-  "version": "1.2",  
+  "version": "1.5",  
   "icons": { "16": "speeddial16.png", 
              "48": "speeddial48.png", 
              "64": "speeddial64.png" 
