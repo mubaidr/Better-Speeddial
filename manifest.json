@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Better Dial +",
   "description": "Brings many improvements to Speed-dial.",
-  "version": "1.5",  
+  "version": "1.7",  
   "icons": { "16": "speeddial16.png", 
              "48": "speeddial48.png", 
              "64": "speeddial64.png" 
@@ -11,10 +11,6 @@
   "content_scripts" : [{
 			"matches" : ["opera://startpage/*"],
 			"css" : ["startpage.css"]
-		},
-		{
-			"matches" : ["opera://*/*", "<all_urls>"],
-			"css" : ["all.css"]
 		}
 	],
 	"developer" : {
