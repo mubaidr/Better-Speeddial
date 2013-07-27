@@ -2,18 +2,25 @@
   "manifest_version": 2,
   "name": "Better Dial +",
   "description": "Brings many improvements to Speed-dial.",
-  "version": "1.7",  
-  "icons": { "16": "speeddial16.png", 
-             "48": "speeddial48.png", 
-             "64": "speeddial64.png" 
+  "version": "2.0",  
+  "icons": { 
+	  "48": "img/icon_48.png"
    },  
   "minimum_chrome_version": "16.0.1196.14",
+  "background" : {
+		"scripts" : ["js/bck.js"],
+		"persistent": false
+	},
   "content_scripts" : [{
 			"matches" : ["opera://startpage/*"],
-			"css" : ["startpage.css"]
+			"css" : ["css/start.css"],
+			"js": ["js/start.js"]
 		}
 	],
 	"developer" : {
-		"name" : "mubaidr"
-	}
+		"name" : "mubaidr",
+		"url": "http://my.opera.com/mubaidr/"
+	},
+	"permissions" : ["storage"],
+	"options_page": "html/option.html"
 }

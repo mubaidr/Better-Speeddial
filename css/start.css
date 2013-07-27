@@ -1,0 +1,96 @@
+/*Hide search*/
+body.hide-websearch .web-search {
+	display: none !important;
+}
+/*Remove wallpaper gradient on top*/
+body.hide-gradient .wallpaper-gradient {
+	background: none!important;
+}
+
+/*Update Add Speeddial button*/
+body.hide-plus .speeddial-add {
+	display: none !important;
+}
+
+body.update-plus .speeddial-add {
+	margin-left: 40px!important;
+	margin-top: 30px!important;
+	width: 150px!important;
+	height: 110px!important;
+	border-radius: 150px!important;
+	border: 1px solid rgba(0, 0, 0, .75)!important;
+}
+/*Hide all navigation buttons*/
+body.hide-all-nav nav .wrapper{
+	display: none !important;
+}
+body.hide-stash nav .wrapper .startpage-nav-stash{
+	display: none !important;
+}
+body.hide-discover nav .wrapper .startpage-nav-discover{
+	display: none !important;
+}
+/*Updated style for Speed-dial*/
+body.speeddial-style .scroll-container {
+	padding-top: 3px !important;
+}
+
+	body.speeddial-style .scroll-container .speeddial-container {
+		padding: 0 80px !important;
+	}
+
+body.speeddial-style .speeddial {
+	border-radius: 0!important;
+	border: none!important;
+}
+
+	body.speeddial-style .speeddial:not(.editing) {
+		box-shadow: none!important;
+		transition: border-color 0.5s!important;
+		border: 1px solid rgba(0, 0, 0, .1)!important;
+	}
+
+		body.speeddial-style .speeddial:not(.editing):hover {
+			border: 1px solid rgba(0, 0, 0, .5)!important;
+		}
+
+body.speeddial-style .folder {
+	border-radius: 0!important;
+	background: none!important;
+	background-color: rgba(0,0,0,0.1)!important;
+}
+
+body.speeddial-style .dial-thumbnail {
+	border-radius: 0!important;
+	border: none!important;
+}
+
+body.speeddial-style .folder-outer-container {
+	border-radius: 0!important;
+	background: none!important;
+	box-shadow: none!important;
+	background-color: rgba(0, 0, 0, 0.75)!important;
+}
+
+	body.speeddial-style .folder-outer-container .folder-speeddial-container .speeddial-add {
+		background-color: rgba(255, 255, 255, 0.3)!important;
+	}
+
+	body.speeddial-style .folder-outer-container .folder-header .folder-title-container {
+		background-color: rgba(0, 0, 0, 0.5)!important;
+	}
+
+		body.speeddial-style .folder-outer-container .folder-header .folder-title-container .folder-title {
+			width: auto!important;
+			left: 0!important;
+		}
+
+	body.speeddial-style .folder-outer-container .folder-header .close-button {
+		border-radius: 15px;
+		border: 2px solid rgba(255, 255, 255, 0.1);
+	}
+
+	body.speeddial-style .folder-outer-container .folder-header .folder-filter {
+		left: 43.5%!important;
+		border-radius: 0!important;
+	}
