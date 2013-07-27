@@ -2,10 +2,6 @@
 body.hide-websearch .web-search {
 	display: none !important;
 }
-/*Remove wallpaper gradient on top*/
-body.hide-gradient .wallpaper-gradient {
-	background: none!important;
-}
 
 /*Update Add Speeddial button*/
 body.hide-plus .speeddial-add {
@@ -13,21 +9,23 @@ body.hide-plus .speeddial-add {
 }
 
 body.update-plus .speeddial-add {
-	margin-left: 40px!important;
-	margin-top: 30px!important;
-	width: 150px!important;
-	height: 110px!important;
+	margin-left: 10px!important;
+	margin-top: 10px!important;
+	width: 210px!important; /*230px*/
+	height: 150px!important; /*170px*/
 	border-radius: 150px!important;
 	border: 1px solid rgba(0, 0, 0, .75)!important;
 }
 /*Hide all navigation buttons*/
-body.hide-all-nav nav .wrapper{
+body.hide-all-nav nav .wrapper {
 	display: none !important;
 }
-body.hide-stash nav .wrapper .startpage-nav-stash{
+
+body.hide-stash nav .wrapper .startpage-nav-stash {
 	display: none !important;
 }
-body.hide-discover nav .wrapper .startpage-nav-discover{
+
+body.hide-discover nav .wrapper .startpage-nav-discover {
 	display: none !important;
 }
 /*Updated style for Speed-dial*/
@@ -54,6 +52,10 @@ body.speeddial-style .speeddial {
 			border: 1px solid rgba(0, 0, 0, .5)!important;
 		}
 
+		body.speeddial-style .speeddial:not(.editing):focus {
+			box-shadow: 0 0 0 3px rgb(46, 130, 236) !important;
+		}
+
 body.speeddial-style .folder {
 	border-radius: 0!important;
 	background: none!important;
@@ -67,9 +69,6 @@ body.speeddial-style .dial-thumbnail {
 
 body.speeddial-style .folder-outer-container {
 	border-radius: 0!important;
-	background: none!important;
-	box-shadow: none!important;
-	background-color: rgba(0, 0, 0, 0.75)!important;
 }
 
 	body.speeddial-style .folder-outer-container .folder-speeddial-container .speeddial-add {
@@ -77,7 +76,7 @@ body.speeddial-style .folder-outer-container {
 	}
 
 	body.speeddial-style .folder-outer-container .folder-header .folder-title-container {
-		background-color: rgba(0, 0, 0, 0.5)!important;
+		background-color: rgba(0, 0, 0, 0.3)!important;
 	}
 
 		body.speeddial-style .folder-outer-container .folder-header .folder-title-container .folder-title {
@@ -85,12 +84,56 @@ body.speeddial-style .folder-outer-container {
 			left: 0!important;
 		}
 
-	body.speeddial-style .folder-outer-container .folder-header .close-button {
-		border-radius: 15px;
-		border: 2px solid rgba(255, 255, 255, 0.1);
+	body.speeddial-style .folder-outer-container .folder-header .folder-filter {
+		width: 23px;
+		transition: all 0.25s;
 	}
 
-	body.speeddial-style .folder-outer-container .folder-header .folder-filter {
-		left: 43.5%!important;
+		body.speeddial-style .folder-outer-container .folder-header .folder-filter:hover {
+			width: 180px;
+		}
+
+		body.speeddial-style .folder-outer-container .folder-header .folder-filter:focus {
+			width: 180px;
+		}
+
+body.speeddial-style .section-nav {
+	transition: all 0.25s;
+	border: 1px solid rgba(0,0,0,0.05);
+}
+
+	body.speeddial-style .section-nav.selected {
 		border-radius: 0!important;
+		box-shadow: none!important;
+		border: 1px solid rgba(186,186,188,0.5);
 	}
+
+		body.speeddial-style .section-nav.selected:focus {
+			/*box-shadow: 0 0 0 3px rgb(46, 130, 236) !important;*/
+		}
+/*Autohide Navigation*/
+body.autohide-nav nav .wrapper {
+	transition: all 0.25s;
+	opacity: 0;
+}
+
+body.autohide-nav nav:hover .wrapper {
+	opacity: 1;
+}
+/*Update style of navigation*/
+body.update-nav .section-nav {
+	display: none;
+}
+body.update-nav .back {
+	width: 100px;
+	height: 25px;
+	border: 1px solid red;
+}
+/*Remove wallpaper gradient on top, and update style for better visibility*/
+body.hide-gradient .wallpaper-gradient {
+	background: none!important;
+}
+
+body.hide-gradient .section-nav {
+	background-color: #f5f6f7;
+}

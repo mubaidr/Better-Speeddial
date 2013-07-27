@@ -1,4 +1,4 @@
-var settings = ["speeddial-style", "hide-websearch", "hide-plus", "update-plus", "hide-all-nav", "update-nav", "autohide-nav", "hide-stash", "hide-discover"];
+var settings = ["hide-websearch", "hide-all-nav", "hide-stash", "hide-discover", "speeddial-style", "hide-plus", "update-plus", "update-nav", "autohide-nav", "hide-gradient"];
 window.onload = function () {
 	restoreOptions();
 	saveOptions();
@@ -32,7 +32,22 @@ function saveOptions() {
 					elem.className = 'hidden';
 				} else {
 					elem.className = '';
+					document.getElementById('hide-stash').checked = false;
+					document.getElementById('hide-discover').checked = false;
+					chrome.storage.sync.set({ "hide-stash": 0, "hide-discover": 0 }, function (evt) {
+						//console.log('saved');
+					});
 				}
+			} else if (e.id == "hide-stash" || e.id == "hide-discover") {
+				chrome.storage.sync.get(["hide-stash", "hide-discover"], function (t) {
+					if (t["hide-stash"] ==1 && t["hide-discover"] == 1) {
+						document.getElementById('hide-all-nav').checked = true;
+						document.getElementById('sub-navigation-option').className = 'hidden';
+						chrome.storage.sync.set({ "hide-all-nav": 1 }, function (evt) {
+							//console.log('saved');
+						});
+					}
+				})
 			}
 		}, false);
 	}
