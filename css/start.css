@@ -79,11 +79,6 @@ body.speeddial-style .folder-outer-container {
 		background-color: rgba(0, 0, 0, 0.3)!important;
 	}
 
-		body.speeddial-style .folder-outer-container .folder-header .folder-title-container .folder-title {
-			width: auto!important;
-			left: 0!important;
-		}
-
 	body.speeddial-style .folder-outer-container .folder-header .folder-filter {
 		width: 23px;
 		transition: all 0.25s;
@@ -103,7 +98,7 @@ body.speeddial-style .section-nav {
 }
 
 	body.speeddial-style .section-nav.selected {
-		border-radius: 0!important;
+		border-radius: 3px!important;
 		box-shadow: none!important;
 		border: 1px solid rgba(186,186,188,0.5);
 	}
@@ -111,6 +106,16 @@ body.speeddial-style .section-nav {
 		body.speeddial-style .section-nav.selected:focus {
 			/*box-shadow: 0 0 0 3px rgb(46, 130, 236) !important;*/
 		}
+
+		/*Remove wallpaper gradient on top, and update style for better visibility*/
+body.hide-gradient .wallpaper-gradient {
+	background: none!important;
+}
+
+body.hide-gradient .section-nav {
+	background-color: #f5f6f7;
+}
+
 /*Autohide Navigation*/
 body.autohide-nav nav .wrapper {
 	transition: all 0.25s;
@@ -121,19 +126,71 @@ body.autohide-nav nav:hover .wrapper {
 	opacity: 1;
 }
 /*Update style of navigation*/
+body.update-nav #view-container {
+	transition: left 1s!important;
+}
+
+body.update-nav #view-container .view{
+	transition: visibility 1s!important;
+}
+
+body.update-nav .wrapper {
+	padding-top: 25px;
+}
+
 body.update-nav .section-nav {
 	display: none;
 }
-body.update-nav .back {
-	width: 100px;
-	height: 25px;
-	border: 1px solid red;
-}
-/*Remove wallpaper gradient on top, and update style for better visibility*/
-body.hide-gradient .wallpaper-gradient {
-	background: none!important;
+
+body.update-nav .nav_icons {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	transition: all 0.5s;
+	opacity: 0.6;
 }
 
-body.hide-gradient .section-nav {
-	background-color: #f5f6f7;
+	body.update-nav .nav_icons:hover {
+		opacity: 1;
+	}
+
+	body.update-nav .nav_icons:focus {
+	}
+
+.zero {
+	left: 0!important;
 }
+
+	.zero > .view {
+		visibility: hidden!important;
+	}
+
+		.zero > .view:first-child {
+			visibility: visible!important;
+		}
+
+.hundred {
+	left: -100%!important;
+}
+
+	.hundred > .view {
+		visibility: hidden!important;
+	}
+
+		.hundred > .view:nth-child(2) {
+			visibility: visible!important;
+		}
+
+.two-hundred {
+	left: -200%!important;
+}
+
+	.two-hundred > .view {
+		visibility: hidden!important;
+	}
+
+		.two-hundred > .view:nth-child(3) {
+			visibility: visible!important;
+		}
