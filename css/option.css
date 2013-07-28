@@ -121,3 +121,16 @@ section div {
 .hidden {
 	display: none!important;
 }
+
+.checkbox span, input{
+	cursor: pointer;
+}
+
+select{
+	cursor: pointer;
+}
+
+.twitter{
+	display: block;
+	margin-top: 25px;
+}
