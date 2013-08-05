@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Better Dial +",
-  "description": "Brings many improvements to Speed-dial.",
-  "version": "2.1",  
+  "description": "Customizations for the  Speed-dial Page.",
+  "version": "2.3",  
   "icons": { 
 	  "48": "img/icon_48.png"
    },  
@@ -12,8 +12,13 @@
 		"persistent": false
 	},
   "content_scripts" : [{
+			"run_at": "document_start",
 			"matches" : ["opera://startpage/*"],
-			"css" : ["css/start.css"],
+			"css" : ["css/start.css"]
+		},
+		{
+			"run_at": "document_end",
+			"matches" : ["opera://startpage/*"],
 			"js": ["js/start.js"]
 		}
 	],
@@ -23,9 +28,5 @@
 	},
     "homepage_url": "http://my.opera.com/mubaidr/blog/",
 	"permissions" : ["storage"],
-	"web_accessible_resources": [
-		"img/left.png",
-		"img/right.png"
-	],
 	"options_page": "html/option.html"
 }

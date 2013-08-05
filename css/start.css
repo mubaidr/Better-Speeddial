@@ -1,91 +1,155 @@
 /*Hide search*/
 body.hide-websearch .web-search {
-	display: none !important;
+	display: none;
 }
 
 /*Update Add Speeddial button*/
 body.hide-plus .speeddial-add {
-	display: none !important;
+	display: none!important;
 }
 
-body.update-plus .speeddial-add {
-	margin-left: 10px!important;
-	margin-top: 10px!important;
-	width: 210px!important; /*230px*/
-	height: 150px!important; /*170px*/
-	border-radius: 150px!important;
-	border: 1px solid rgba(0, 0, 0, .75)!important;
+body.hide-plus .speeddial-container {
+	height: auto!important;
 }
+
+body.hide-plus .scroll-container {
+	height: 100%!important;
+}
+
+body.hide-plus .folder-scroll-container {
+	height: auto!important;
+}
+
+body.hide-plus .folder-speeddial-container {
+	height: auto!important;
+}
+
+body.hide-plus .folder-scroll-container {
+	height: auto!important;
+	overflow-x: hidden;
+	padding-left: 1.5em;
+}
+/*Update address Speeddial button*/
+body.update-plus .speeddial-add {
+	margin-left: 40px!important;
+	margin-top: 10px!important;
+	width: 150px!important;
+	height: 150px!important;
+	border-radius: 150px!important;
+	border: 1px solid rgba(255, 255, 255, .3)!important;
+}
+
 /*Hide all navigation buttons*/
 body.hide-all-nav nav .wrapper {
-	display: none !important;
+	display: none;
 }
 
 body.hide-stash nav .wrapper .startpage-nav-stash {
-	display: none !important;
+	display: none;
 }
 
 body.hide-discover nav .wrapper .startpage-nav-discover {
-	display: none !important;
+	display: none;
 }
+
+/*Remove wallpaper gradient on top, and update style for better visibility*/
+body.hide-gradient .wallpaper-gradient {
+	background: none;
+}
+
+body.hide-gradient .section-nav {
+	background-color: #f5f6f7;
+}
+
+/*Autohide Navigation*/
+body.autohide-nav nav .wrapper {
+}
+
+body.autohide-nav .section-nav {
+	transition: all 0.25s;
+	opacity: 0;
+}
+
+body.autohide-nav nav:hover .section-nav {
+	opacity: 1;
+}
+
 /*Updated style for Speed-dial*/
-body.speeddial-style .scroll-container {
-	padding-top: 3px !important;
+body.speeddial-style {
 }
 
-	body.speeddial-style .scroll-container .speeddial-container {
-		padding: 0 80px !important;
+	body.speeddial-style .scroll-container {
+		height: 100%!important;
 	}
 
-body.speeddial-style .speeddial {
-	border-radius: 0!important;
-	border: none!important;
-}
-
-	body.speeddial-style .speeddial:not(.editing) {
-		box-shadow: none!important;
-		transition: border-color 0.5s!important;
-		border: 1px solid rgba(0, 0, 0, .1)!important;
+	body.speeddial-style .speeddial-container {
+		height: auto!important;
+		-webkit-perspective-origin: 50% 400%;
+		-webkit-perspective: 800px;
 	}
 
-		body.speeddial-style .speeddial:not(.editing):hover {
-			border: 1px solid rgba(0, 0, 0, .5)!important;
+		body.speeddial-style .speeddial-container div {
+			transform-style: preserve-3d;
 		}
 
-		body.speeddial-style .speeddial:not(.editing):focus {
-			box-shadow: 0 0 0 3px rgb(46, 130, 236) !important;
+	body.speeddial-style .speeddial {
+		border-radius: 0;
+		border: 1px solid rgba(0, 0, 0, .2);
+		transition: all 0.3s;
+	}
+
+		body.speeddial-style .speeddial:hover {
+			border: 1px solid rgba(0, 0, 0, .5);
+			-webkit-transform: translateZ(0) rotateY(0)!important;
+			z-index: 99!important;
 		}
 
-body.speeddial-style .folder {
-	border-radius: 0!important;
-	background: none!important;
-	background-color: rgba(0,0,0,0.1)!important;
-}
+	body.speeddial-style .folder-outer-container .folder-speeddial-container {
+	}
 
-body.speeddial-style .dial-thumbnail {
-	border-radius: 0!important;
-	border: none!important;
-}
+	body.speeddial-style .speeddial-add {
+		margin-left: 10px;
+		margin-top: 10px;
+		width: 210px; /*230px*/
+		height: 150px; /*170px*/
+	}
 
-body.speeddial-style #container-contextual-functionality {
-	transition: all 0.2s;
-}
+	body.speeddial-style .speeddial-close {
+		display: none;
+	}
 
-body.speeddial-style .folder-outer-container {
-	border-radius: 0!important;
-}
+	body.speeddial-style .folder {
+		border-radius: 0;
+		background: none;
+		background-color: rgba(0,0,0,0.2);
+	}
+
+	body.speeddial-style .dial-thumbnail {
+		border-radius: 0;
+		border: 1px solid rgba(0, 0, 0, 0);
+	}
+
+	body.speeddial-style .folder-outer-container {
+		border-radius: 0;
+		box-shadow: 0 0 10px black;
+	}
+
+	body.speeddial-style #container-contextual-functionality .filter-container {
+		border-radius: 15px;
+		background-color: white;
+	}
 
 	body.speeddial-style .folder-outer-container .folder-speeddial-container .speeddial-add {
-		background-color: rgba(255, 255, 255, 0.3)!important;
+		/*background-color: rgba(255, 255, 255, 0.3);*/
 	}
 
 	body.speeddial-style .folder-outer-container .folder-header .folder-title-container {
-		background-color: rgba(0, 0, 0, 0.3)!important;
+		background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	body.speeddial-style .folder-outer-container .folder-header .folder-filter {
 		width: 23px;
-		transition: all 0.25s;
+		transition: width 0.25s;
 	}
 
 		body.speeddial-style .folder-outer-container .folder-header .folder-filter:hover {
@@ -96,65 +160,59 @@ body.speeddial-style .folder-outer-container {
 			width: 180px;
 		}
 
-body.speeddial-style .section-nav {
-	transition: all 0.25s;
-	border: 3px solid #f5f6f7!important;
-	box-shadow: 0 1px 4px!important;
-}
-
-	body.speeddial-style .section-nav.selected {
-		border: 3px solid #f5f6f7!important;
-		box-shadow: 0 1px 2px!important;
+	body.speeddial-style .wrapper {
 	}
 
-	body.speeddial-style .section-nav:focus {
-		border: 3px solid rgb(46, 130, 236)!important;
+	body.speeddial-style .section-nav {
+		margin-top: -5px;
+		border-radius: 0;
+		padding-top: 5px;
+		background-position: 10px 80%;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
 	}
 
-/*Remove wallpaper gradient on top, and update style for better visibility*/
-body.hide-gradient .wallpaper-gradient {
-	background: none!important;
+		body.speeddial-style .section-nav.selected {
+			box-shadow: none;
+		}
+
+		body.speeddial-style .section-nav:focus {
+		}
+
+body.new-title-style .speeddial-title-container {
+	background-color: rgba(0,0,0,0.3);
+	color: white;
 }
 
-body.hide-gradient .section-nav {
-	background-color: #f5f6f7;
-}
-
-/*Autohide Navigation*/
-body.autohide-nav nav .wrapper {
-	transition: all 0.25s;
-	opacity: 0;
-}
-
-body.autohide-nav nav:hover .wrapper {
-	opacity: 1;
-}
 /*Update style of navigation*/
-body.update-nav #view-container {
-	transition: left 0.3s!important;
+/*body.update-nav #view-container {
+	transition: left 3s;
 }
 
 	body.update-nav #view-container .view {
-		-webkit-transform: translateZ(0);		
-		transition: visibility 0.3s!important;
+		-webkit-transform: translateZ(0);
+		transition: visibility 3s;
 	}
 
 body.update-nav .wrapper {
-	padding-top: 25px;
+	padding-top: 20px;
 }
 
 body.update-nav .section-nav {
-	display: none;
+	visibility: hidden;
 }
 
 body.update-nav .nav_icons {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
-	transition: all 0.25s;
-	opacity: 0.6;
+	transition: all 0.5s;
+	opacity: 0.3;
+	box-shadow: 0 0 5px black;
+	border-radius: 36px;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 	body.update-nav .nav_icons:hover {
@@ -199,3 +257,4 @@ body.update-nav .nav_icons {
 		.two-hundred > .view:nth-child(3) {
 			visibility: visible!important;
 		}
+*/
